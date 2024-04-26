@@ -1,0 +1,20 @@
+[
+    {
+        "category": "clothes",
+        "item": "pants",
+        "count": 4,
+        "done": false
+    },
+    {
+        "category": "clothes",
+        "item": "pants",
+        "count": 4,
+        "done": false
+    },
+    {
+        "category": "clothes",
+        "item": "pants",
+        "count": 4,
+        "done": false
+    }
+]
