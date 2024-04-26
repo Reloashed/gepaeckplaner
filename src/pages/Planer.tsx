@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Display from "../components/Display";
 import Form from "../components/Form";
-import { Input, CheckListItem, Item } from "../types";
+import { Input, CheckListItem } from "../types";
 
 export default function Planer() {
   let input: Input;
@@ -415,7 +415,7 @@ export default function Planer() {
   return (
     <>
       <Form onSave={onSave}></Form>
-      <Display checkList={stateList}></Display>
+      {stateList && <Display checkList={stateList}></Display>}
     </>
   );
 }
