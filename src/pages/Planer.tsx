@@ -32,7 +32,7 @@ export default function Planer() {
             ski(parseInt(input.days) / 2);
             break;
           case "other":
-            other();
+            otherType();
             break;
         }
         break;
@@ -52,7 +52,7 @@ export default function Planer() {
             ski(parseInt(input.days) / 5);
             break;
           case "other":
-            other();
+            otherType();
             break;
         }
         break;
@@ -72,10 +72,25 @@ export default function Planer() {
             ski(parseInt(input.days) / 8);
             break;
           case "other":
-            other();
+            otherType();
             break;
         }
         break;
+    }
+
+    switch (input.accomodation) {
+        case "hotel":
+            hotel()
+            break
+        case "house":
+            house()
+            break
+        case "tent":
+            tent()
+            break
+        case "other":
+            otherAccomodation()
+            break
     }
   }
 
@@ -109,6 +124,42 @@ export default function Planer() {
         category: "Kleider",
         item: "Socken",
         count: parseInt(input.days) * 1.2,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Zahnbürste",
+        count: 1,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Zahnpasta",
+        count: 1,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Zahnspühlung",
+        count: 1,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Schampoo",
+        count: 1,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Abtrocknungstuch",
+        count: 1,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Deo",
+        count: 1,
         done: false,
       },
     ];
@@ -145,6 +196,36 @@ export default function Planer() {
         count: parseInt(input.days),
         done: false,
       },
+      {
+        category: "Utensilien",
+        item: "Zahnbürste",
+        count: 1,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Zahnpasta",
+        count: 1,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Schampoo",
+        count: 1,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Abtrocknungstuch",
+        count: 1,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Deo",
+        count: 1,
+        done: false,
+      },
     ];
   }
   function dirtyHygene() {
@@ -177,6 +258,30 @@ export default function Planer() {
         category: "Kleider",
         item: "Socken",
         count: parseInt(input.days) / 1.4,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Zahnbürste",
+        count: 1,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Zahnpasta",
+        count: 1,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Abtrocknungstuch",
+        count: 1,
+        done: false,
+      },
+      {
+        category: "Utensilien",
+        item: "Deo",
+        count: 1,
         done: false,
       },
     ];
@@ -238,7 +343,74 @@ export default function Planer() {
       done: false,
     });
   }
-  function other() {}
+  function otherType() {}
+
+  function hotel() {}
+  function house() {}
+  function tent() {
+    checkList.push({
+        category: "Utensilien",
+        item: "Zelt",
+        count: 1,
+        done: false,
+    });
+    checkList.push({
+        category: "Utensilien",
+        item: "Schlafsack",
+        count: 1,
+        done: false,
+    });
+    checkList.push({
+        category: "Utensilien",
+        item: "Lampe",
+        count: 1,
+        done: false,
+    });
+    checkList.push({
+        category: "Utensilien",
+        item: "Schlafsack",
+        count: 1,
+        done: false,
+    });
+    checkList.push({
+        category: "Utensilien",
+        item: "Koch Utensilien",
+        count: 1,
+        done: false,
+    });
+    checkList.push({
+        category: "Utensilien",
+        item: "Besteck",
+        count: 1,
+        done: false,
+    });
+  }
+  function otherAccomodation() {
+    checkList.push({
+        category: "Utensilien",
+        item: "Schlafsack",
+        count: 1,
+        done: false,
+    });
+    checkList.push({
+        category: "Utensilien",
+        item: "Lampe",
+        count: 1,
+        done: false,
+    });
+    checkList.push({
+        category: "Utensilien",
+        item: "Koch Utensilien",
+        count: 1,
+        done: false,
+    });
+    checkList.push({
+        category: "Utensilien",
+        item: "Besteck",
+        count: 1,
+        done: false,
+    });
+  }
 
   return (
     <>
