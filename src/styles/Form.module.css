@@ -1,5 +1,63 @@
 form {
+    width: 30%;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px white;
+    background-color: rgb(16, 14, 43);
     display: flex;
     flex-direction: column;
-    width: 50%;
+    align-items: center;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin-bottom: 1.5rem;
+}
+
+.group label {
+    margin-bottom: 0.4rem;
+}
+
+.group p {
+    margin: 0;
+    padding: 0.3rem;
+    background-color: rgb(39, 35, 92);
+    border-radius: 0.4rem;
+}
+
+.group input {
+    border-radius: 1rem;
+    border: none;
+    text-indent: 0.3rem;
+    padding: 0.2rem 0.4rem;
+    width: 100%;
+    transition: 0.2s;
+}
+
+#text:focus {
+    outline: none;
+    box-shadow: 0 0 4px white;
+}
+
+.group select {
+    border-radius: 1rem;
+    border: none;
+    padding: 0.2rem 0.4rem;
+    width: 100%;
+}
+
+#button {
+    background-color: white;
+    border: none;
+    padding: 0.4rem 0.7rem;
+    border-radius: 3rem;
+    width: 6rem;
+    transition: 0.4s;
+}
+
+#button:hover {
+    width: 9rem;
 }

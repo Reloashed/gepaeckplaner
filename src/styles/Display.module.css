@@ -6,7 +6,7 @@
 }
 
 #title {
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: underline ;
 }
 
@@ -16,4 +16,5 @@
 
 #item {
     margin-left: 0.5rem;
+    font-weight: 100;
 }

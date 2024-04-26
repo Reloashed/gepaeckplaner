@@ -6,7 +6,7 @@ import { Input, CheckListItem, Item } from "../types";
 export default function Planer() {
   let input: Input;
   let checkList: CheckListItem[];
-  const [stateList, setStateList] = useState<CheckListItem[]>([])
+  const [stateList, setStateList] = useState<CheckListItem[]>()
 
   const onSave = (inputForm: Input) => {
     input = inputForm;
@@ -20,7 +20,7 @@ export default function Planer() {
         cleanHygene();
         switch (input.type) {
           case "beach":
-            beach(parseInt(input.days) / 1.5);
+            beach(parseInt(input.days) / 2);
             break;
           case "hike":
             hike(parseInt(input.days) / 3);
@@ -40,7 +40,7 @@ export default function Planer() {
         normalHygene();
         switch (input.type) {
           case "beach":
-            beach(parseInt(input.days) / 2);
+            beach(parseInt(input.days) / 2.5);
             break;
           case "hike":
             hike(parseInt(input.days) / 5);
@@ -60,7 +60,7 @@ export default function Planer() {
         dirtyHygene();
         switch (input.type) {
           case "beach":
-            beach(parseInt(input.days) / 2.5);
+            beach(parseInt(input.days) / 3);
             break;
           case "hike":
             hike(parseInt(input.days) / 8);
@@ -111,7 +111,7 @@ export default function Planer() {
       {
         category: "Kleider",
         item: "Hosen",
-        count: parseInt(input.days) / 1.7,
+        count: parseInt(input.days) / 2,
         done: false,
       },
       {
@@ -181,7 +181,7 @@ export default function Planer() {
       {
         category: "Kleider",
         item: "Hosen",
-        count: parseInt(input.days) / 2,
+        count: parseInt(input.days) / 2.5,
         done: false,
       },
       {
@@ -245,7 +245,7 @@ export default function Planer() {
       {
         category: "Kleider",
         item: "Hosen",
-        count: parseInt(input.days) / 2.5,
+        count: parseInt(input.days) / 3,
         done: false,
       },
       {
